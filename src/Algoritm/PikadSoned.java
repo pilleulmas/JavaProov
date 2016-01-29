@@ -3,9 +3,9 @@ package Algoritm;
 import java.util.Arrays;
 
 /**
- * Antud on massiiv. Mitu sõne on massiivis pikemad kui keskmised?
+ * Antud on massiiv. Mitu sõne on massiivis keskmisest pikemad?
  */
-public class KeskmineSone {
+public class PikadSoned {
     public static void main(String[] args) {
         String[] esimene = {"kaalikas", "joonas", "millimallikas", "homeros", "mandel"};
         String[] teine = {"kapsas", "mandel", "pannal", "kaalikas", "mandel", "toivo"};
