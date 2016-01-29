@@ -3,9 +3,10 @@ package Maatriks;
 import java.util.Arrays;
 
 /**
- * Loo X*X suurune maatriks, millele tekib kagu suunaline nurkade muster, nagu näites.
+ * Loo 9*9 suurune maatriks, millele tekib kagu suunaline nurkade muster, nagu näites.
+ * Tundub raske? Sul tuleb lihtsalt veeru ja rea indeksi seos leida.
  *
- * Näide 9*9 maatriksiga:
+ * Näide
  * 9 8 7 6 5 4 3 2 1
  * 8 8 7 6 5 4 3 2 1
  * 7 7 7 6 5 4 3 2 1
@@ -19,17 +20,8 @@ import java.util.Arrays;
  * Tundub raske? Leia seoseid rea ja veeru indeksi numbritega.
  */
 public class KaguNurk {
-    public static void main(String[] args) {
-        printMaatriks(genereeriKaguNurk(5));
-        printMaatriks(genereeriKaguNurk(10));
-        printMaatriks(genereeriKaguNurk(25));
-    }
 
-    private static int[][] genereeriKaguNurk(int i) {
-        // Lahendus siia meetodi sisse
-        return new int[0][];
-    }
-
+    // Lihtsalt abiline meetod, et maatriksit välja printida
     private static void printMaatriks(int[][] laud) {
         for (int i = 0; i < laud.length; i++) {
             System.out.println(Arrays.toString(laud[i]));

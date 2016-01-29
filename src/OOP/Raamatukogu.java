@@ -10,7 +10,8 @@ import java.util.Arrays;
 public class Raamatukogu {
     public static void main(String[] args) {
 
-        Sonaraamat raamat = new Sonaraamat("Eesti");
+        String raamatuKeel = "Eesti";
+        Sonaraamat raamat = new Sonaraamat(raamatuKeel);
         raamat.sisestaSona("puaas");
         raamat.sisestaSona("uubuma");
         raamat.sisestaSona("uudikristamine");
@@ -26,7 +27,7 @@ public class Raamatukogu {
 
         raamat.eemaldaSona(vaste2[0]);
 
-        raamat.misKeeleRaamatOled();
+        raamat.misKeelesRaamatOn();
 
     }
 }

@@ -12,29 +12,31 @@ package OOP;
 public class Pidu {
     public static void main(String[] args) {
 
-        Korter korter = new Korter("Kolde pst. 45-2");
+        int mahutab = 10;
+        Korter korter = new Korter(mahutab);
 
         korter.saabus("Taavi");
         korter.saabus("Pilve");
-        korter.saabusid(new String[]{"Maarika", "Joonas"});
-        korter.saabusid(new String[]{"Kalle", "Muri", "Sille"});
+        korter.saabus("Maarika");
+        korter.saabus("Joonas");
+        korter.saabus("Kalle");
+        korter.saabus("Muri");
+        korter.saabus("Sille");
 
-        int mitu = korter.mituInimestOnKorteris();
-        System.out.println(mitu);
-
-        int mituVeel = korter.mituInimestVeelMahub();
-        System.out.println(mituVeel);
+        korter.prindiKylalisteArv();
+        korter.prindiPaljuVeelMahub();
 
         korter.lahkus("Taavi");
 
-        korter.saabusid(new String[]{"Tambet", "Liisa", "Liis", "Veidro", "Moonika", "Politsei"});
+        korter.saabus("Tambet");
+        korter.saabus("Liisa");
+        korter.saabus("Liis");
+        korter.saabus("Veidro");
+        korter.saabus("Moonika");
+        korter.saabus("Politsei");
 
-        korter.lahkus("Spiido");
+        korter.lahkus("Sille");
 
-        mitu = korter.mituInimestOnKorteris(); // peaks olema 9, järjekorda ei ole.
-        System.out.println(mitu);
-
-        String aadress = korter.misOnAadress();
-
+        korter.prindiKylalisteArv(); // peaks olema 9, järjekorda ei ole.
     }
 }

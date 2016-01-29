@@ -4,28 +4,25 @@ package OOP;
  * Loo klass Zelda, mis käitub nii nagu käesolev programm ootab.
  *
  * Reeglid:
- * 1. Zeldal on alguses 100 elu.
- * 2. Rünnates ja kaitstes ütleb Zelda midagi konsooli.
- * 3. Kaitstes läheb Zeldal vahemikus 0-40 elu, vali randomiga.
- * 4. Surres ütleb Zelda oma viimase palve.
- * 5. Käesolevat klassi muuta ei tohi.
+ * 1. Legend klassi muuta ei tohi.
+ * 2. Zelda kaotab nii palju elusid kui kollil elusid on.
  */
 public class Legend {
     public static void main(String[] args) {
+        int kollilElusid;
 
-        Zelda zelda = new Zelda("Player 2");
+        int elusid = 35;
+        Zelda zelda = new Zelda(elusid);
 
-        // Zelda leidis kolli kellega kakelda
+        kollilElusid = 25;
+        zelda.kaklusKolliga(kollilElusid);
 
-        zelda.rynnak();
-        zelda.kaitse();
-        zelda.kaitse();
-        zelda.rynnak();
-        zelda.rynnak();
-        zelda.rynnak();
+        zelda.prindiMituEluAlles();
 
-        zelda.kasOledElus();
-        zelda.misOnMangijaNimi();
+        kollilElusid = 57;
+        zelda.kaklusKolliga(kollilElusid);
+
+        zelda.prindiKasOnElus();
 
     }
 }
