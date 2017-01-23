@@ -20,13 +20,34 @@ import java.util.Arrays;
  * Tundub raske? Leia seoseid rea ja veeru indeksi numbritega.
  */
 public class KaguNurk {
+    public static void main(String[] args) {
+        int[][] laud = new int [9][9];
+        int count1 = 9;
+        int count2 = 9;
+        int loendur = 1;
+
+        while (count1 > 0) {
+            count2 = 9;
+            int a = 1;
+            while (count2 > 0){
+                laud[count1-1][count2-1] = a;
+                if (loendur>a){
+                    a++;
+                }
+                count2--;
+            }
+            count1--;
+            loendur++;
+        }
+        printMaatriks(laud);
+    }
 
     // Lihtsalt abiline meetod, et maatriksit välja printida
-    private static void printMaatriks(int[][] laud) {
+    private static void printMaatriks ( int[][] laud){
         for (int i = 0; i < laud.length; i++) {
             System.out.println(Arrays.toString(laud[i]));
         }
         System.out.println("");
     }
-
 }
+

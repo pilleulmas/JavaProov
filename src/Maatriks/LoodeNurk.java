@@ -20,6 +20,27 @@ import java.util.Arrays;
  * Tundub raske? Leia seoseid rea ja veeru indeksi numbritega.
  */
 public class LoodeNurk {
+    public static void main(String[] args) {
+        int[][] laud = new int [9][9];
+        int count1 = 0;
+        int count2;
+        int loendur = 1;
+
+        while (count1 < 9) {
+            count2 = 0;
+            int a = 1;
+            while (count2 < 9){
+                laud[count1][count2] = a;
+                if (loendur>a){
+                    a++;
+                }
+                count2++;
+            }
+            count1++;
+            loendur++;
+        }
+        printMaatriks(laud);
+    }
 
     // Lihtsalt abiline meetod, et maatriksit välja printida
     private static void printMaatriks(int[][] laud) {

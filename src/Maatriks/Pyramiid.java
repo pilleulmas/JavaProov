@@ -1,5 +1,7 @@
 package Maatriks;
 
+import java.util.Arrays;
+
 /**
  * Nüüd paneme loode ja kagu nurga kokku ja loome pealtvaates püramiidi:
  *
@@ -21,4 +23,21 @@ package Maatriks;
  *  mõtle - lahendada on võimalik kahe tsükli ja ühe if lausega.
  */
 public class Pyramiid {
+    public static void main(String[] args) {
+
+        int row = 0;
+        while (row< 9) {
+            int [] numbers = new int[9];
+            int column = 0;
+            int a = 0;
+            while (column < 9) {
+                numbers[column] = a;
+                if(column<row && column<(8-row)){a++;}
+                else if (column>=row && column>=(8-row)){a--;}
+                column++;
+        }
+            System.out.println(Arrays.toString(numbers));
+            row++;
+        }
+    }
 }
