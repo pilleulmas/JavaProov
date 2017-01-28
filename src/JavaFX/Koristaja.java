@@ -1,14 +1,13 @@
 package JavaFX;
 
 import javafx.application.Application;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -31,15 +30,17 @@ import java.util.Random;
             Random rand=new Random();
 
             Label l = new Label("Keegi on su selja taga!");
-            l.setTranslateX(rand.nextInt(400)+50);
+            l.setTranslateX(rand.nextInt(350)+50);
             l.setTranslateY(rand.nextInt(400)+50);
+            l.setFont(Font.font("Verdana", 20));
             kujund.getChildren().add(l);
 
             ArrayList<Circle> list = new ArrayList<>();   //ringide moodustamine
             for (int i = 0; i < 200; i++) {
-                Circle joonistanRingi = new Circle(Math.random() * 100);
+                Circle joonistanRingi = new Circle((Math.random() * 100)+25);
                 joonistanRingi.setTranslateX(Math.random()*500);
                 joonistanRingi.setTranslateY(Math.random()*500);
+                joonistanRingi.setFill(Color.rgb(rand.nextInt(255),rand.nextInt(255),rand.nextInt(255)));
                 kujund.getChildren().add(joonistanRingi);
                 list.add( joonistanRingi);
             }

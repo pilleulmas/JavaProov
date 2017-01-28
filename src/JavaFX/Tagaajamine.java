@@ -7,8 +7,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-
 /**
  * Joonista 500x500 ekraanile ring. Kui hiir ringile vastu läheb, leiab ring omale
  * uue koha. Ei pea animeerima ega midagi fäänsit. Lihtsalt ilmub uues kohas ja kõik.
@@ -32,6 +30,7 @@ public class Tagaajamine extends Application {
         joonistanRingi.setOnMouseEntered(event -> {
             joonistanRingi.setTranslateX(Math.random()*500);
             joonistanRingi.setTranslateY(Math.random()*500);
+            joonistanRingi.setFill(Color.rgb((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)));
             });
     }
 }

@@ -21,15 +21,17 @@ public class Sonaraamat {
         System.out.println(list);
     }
     public String[] otsiEsimeseTaheJargi (String taht){
-        String[] tulemus = new String[2];
-        int a = 0;
+        ArrayList<String> tulemus = new ArrayList();
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).startsWith(taht)){
-                tulemus[a] = list.get(i);
-                a++;
+                tulemus.add(list.get(i));
             }
         }
-        return tulemus;
+        String[] tulem = new String[tulemus.size()];
+        for (int i = 0; i < tulemus.size() ; i++) {
+            tulem[i] = tulemus.get(i);
+        }
+        return tulem;
     }
     public void misKeelesRaamatOn(){
         System.out.println(raamatuKeel);

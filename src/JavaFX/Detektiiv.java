@@ -32,7 +32,7 @@ public class Detektiiv  extends Application {
             joonistanRingi.setTranslateY(Math.random()*500);
             kujund.getChildren().add(joonistanRingi);
             list.add( joonistanRingi);
-            joonistanRingi.setFill(Color.WHITE);
+            joonistanRingi.setFill(Color.TRANSPARENT);
         }
         for (int i = 0; i <list.size() ; i++) {
             Circle tsekinRingi = list.get(i);

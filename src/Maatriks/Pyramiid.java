@@ -39,5 +39,19 @@ public class Pyramiid {
             System.out.println(Arrays.toString(numbers));
             row++;
         }
+       /*
+       Kristeri versioon:
+
+       for (int i = 0; i <9; i++) {
+            for (int j = 0; j <9; j++) {
+                if (i+j <9){
+                    System.out.print(Math.min(i,j));
+                }
+                else{
+                    System.out.print(Math.min(8-i,8-j));
+                }
+            }
+            System.out.println();
+        }*/
     }
 }
